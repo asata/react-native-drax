@@ -179,8 +179,10 @@ const DraxScrollViewUnforwarded = (
 	);
 
 	// Monitor drag-over events to react with auto-scrolling.
+    // 아래 코드 주석 처리, 영역 테두리에 위치한 경우 스크롤 하지 않음
 	const onMonitorDragOver = useCallback(
 		(event: DraxMonitorEventData) => {
+			/*
 			const { monitorOffsetRatio } = event;
 			const autoScrollState = autoScrollStateRef.current;
 			if (monitorOffsetRatio.x >= autoScrollForwardThreshold) {
@@ -202,6 +204,7 @@ const DraxScrollViewUnforwarded = (
 			} else {
 				startScroll();
 			}
+			*/
 		},
 		[
 			stopScroll,
